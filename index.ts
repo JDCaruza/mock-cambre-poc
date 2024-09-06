@@ -1,4 +1,6 @@
+import Express from "express";
 import WebSocket from "ws";
+const App = Express();
 let numero = 0;
 async function delayFunc(): Promise<void> {
     while(1){
@@ -10,9 +12,14 @@ async function delayFunc(): Promise<void> {
     }
 }
 
+App.get("/", (req, res)=>{
+   return res.status(200).json({mensaje: "prueba"});
+});
+
 function numeroRandom(): number {
     return Math.floor(Math.random() * 401); // Genera un número aleatorio entre 0 y 400
   }
+//App.listen(3000, "", () =>{console.log("funcionando")});
 
 // Initialize WebSocket server
 const wss = new WebSocket.Server({ port: 8080 });
