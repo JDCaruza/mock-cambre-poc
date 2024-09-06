@@ -22,7 +22,7 @@ function numeroRandom(): number {
 //App.listen(3000, "", () =>{console.log("funcionando")});
 
 // Initialize WebSocket server
-const wss = new WebSocket.Server({ port: 8080 });
+const wss = new WebSocket.Server({ port: 8080 , path: '/Maquina' });
 
 // WebSocket event handling
 wss.on('connection', (ws) => {
