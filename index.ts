@@ -45,3 +45,10 @@ wss.on('connection', (ws) => {
     console.log('A client disconnected.');
   });
 });
+
+// Start the server
+const port = 3000;
+App.listen(port, () => {
+  console.log(`Server started on http://localhost:${port}`);
+  delayFunc();
+});
