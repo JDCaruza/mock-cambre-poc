@@ -15,7 +15,7 @@ function numeroRandom(): number {
   }
 
 // Initialize WebSocket server
-const wss = new WebSocket.Server({ port: 8000 });
+const wss = new WebSocket.Server({ port: 8080 });
 
 // WebSocket event handling
 wss.on('connection', (ws) => {
